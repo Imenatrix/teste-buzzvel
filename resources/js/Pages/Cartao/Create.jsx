@@ -1,5 +1,4 @@
 import { useForm } from '@inertiajs/react'
-import PrimaryButton from '@/Components/PrimaryButton'
 
 export default function () {
 
@@ -20,19 +19,25 @@ export default function () {
     }
 
     return (
-        <form onSubmit={submit}>
-            <h1>QR Code Image Generator</h1>
+        <form onSubmit={submit} className="p-3 space-y-5">
+            <h1 className="text-3xl ml-20">QR Code Image Generator</h1>
 
-            <label htmlFor="nome">Name</label>
-            <input type="text" name="nome" id="nome" onChange={onHandleChange}/> <br/>
+            <div className='border border-gray-300 rounded-md flex'>
+                <label className='bg-gray-200 text-gray-500 w-60 h-10 text-center py-2 border-r rounded-l-md border-r-gray-300' htmlFor="nome">Name</label>
+                <input className='border-none w-full rounded-r-md' type="text" name="nome" id="nome" onChange={onHandleChange}/>
+            </div>
 
-            <label htmlFor="linkedin">Linkedin URL</label>
-            <input type="text" name="linkedin" id="linkedin" onChange={onHandleChange}/> <br/>
+            <div className='border border-gray-300 rounded-md flex'>
+                <label className='bg-gray-200 text-gray-500 w-60 h-10 text-center py-2 border-r rounded-l-md border-r-gray-300' htmlFor="linkedin">Linkedin URL</label>
+                <input className='border-none w-full rounded-r-md' type="text" name="linkedin" id="linkedin" onChange={onHandleChange}/> <br/>
+            </div>
 
-            <label htmlFor="github">Github URL</label>
-            <input type="text" name="github" id="github" onChange={onHandleChange}/> <br/>
+            <div className='border border-gray-300 rounded-md flex'>
+                <label className='bg-gray-200 text-gray-500 w-60 h-10 text-center py-2 border-r rounded-l-md border-r-gray-300' htmlFor="github">Github URL</label>
+                <input className='border-none w-full rounded-r-md' type="text" name="github" id="github" onChange={onHandleChange}/> <br/>
+            </div>
 
-            <button>Generate Image</button>
+            <button className="border border-black rounded-md px-40 py-2 text-xl">Generate Image</button>
         </form>
     )
 }

@@ -44,7 +44,7 @@ class CartaoController extends Controller
      */
     public function show(Cartao $cartao)
     {
-        //
+        return Inertia::render('Cartao/Show', ['cartao' => $cartao]);
     }
 
     /**
