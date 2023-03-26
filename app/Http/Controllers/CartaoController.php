@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreCartaoRequest;
 use App\Lib\Slug;
 use App\Models\Cartao;
 use Illuminate\Http\Request;
@@ -20,14 +21,10 @@ class CartaoController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreCartaoRequest $request)
     {
-        $cartao = new Cartao;
-        $cartao->nome = $request->input('nome');
-        $cartao->linkedin = $request->input('linkedin');
-        $cartao->github = $request->input('github');
-        $cartao->slug = Slug::generateSlug($cartao);
-        $cartao->save();
+        $validated = $request->validated();
+        $cartao = Cartao::create([...$validated, 'slug' => Slug::generateSlug($validated['nome'])]);
         return redirect()->route('cartao.show', ['cartao' => $cartao]);
     }
 

@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Cartao extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'nome',
+        'linkedin',
+        'github',
+        'slug'
+    ];
 }
