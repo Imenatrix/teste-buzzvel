@@ -40,3 +40,4 @@ require __DIR__.'/auth.php';
 
 Route::resource('cartao', CartaoController::class)->except('create');
 Route::get('/generate', [CartaoController::class, 'create'])->name('cartao.create');
+Route::get('/{cartao:slug}', [CartaoController::class, 'showLandingPage'])->name('cartao.show_landing_page');

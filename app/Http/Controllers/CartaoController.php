@@ -47,6 +47,10 @@ class CartaoController extends Controller
         return Inertia::render('Cartao/Show', ['cartao' => $cartao]);
     }
 
+    public function showLandingPage(Cartao $cartao) {
+        return Inertia::render('Cartao/LandingPage', ['cartao' => $cartao]);
+    }
+
     /**
      * Show the form for editing the specified resource.
      */
