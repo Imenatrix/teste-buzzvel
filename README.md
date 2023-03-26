@@ -1,5 +1,8 @@
 # Instruções de execução
 
+**! ATENÇÃO !**
+O projeto está temporariamente sendo hosteado em http://35.173.60.101 (AWS)
+
 ## Variáveis de ambiente
 
 - Copie os conteudos de .env.example para .env
