@@ -10,16 +10,6 @@ use Tests\TestCase;
 
 class SlugTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     */
-    public function test_example(): void
-    {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
-    }
-
     public function test_can_convert_name_to_slug(): void
     {
         $result = Slug::nameToSlug('Imena Gomes do Rosario');

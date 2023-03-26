@@ -17,8 +17,8 @@ class Slug {
         return strtolower(join('_', explode(' ', $nome)));
     }
 
-    public static function generateSlug($cartao) {
-        $suffix = Slug::generateSlugSuffix($cartao->nome);
-        return Slug::nameToSlug($cartao->nome).($suffix ? '_'.$suffix : '');
+    public static function generateSlug($nome) {
+        $suffix = Slug::generateSlugSuffix($nome);
+        return Slug::nameToSlug($nome).($suffix ? '_'.$suffix : '');
     }
 }

@@ -10,14 +10,6 @@ use Inertia\Inertia;
 class CartaoController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
      * Show the form for creating a new resource.
      */
     public function create()
@@ -49,29 +41,5 @@ class CartaoController extends Controller
 
     public function showLandingPage(Cartao $cartao) {
         return Inertia::render('Cartao/LandingPage', ['cartao' => $cartao]);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Cartao $cartao)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Cartao $cartao)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Cartao $cartao)
-    {
-        //
     }
 }
