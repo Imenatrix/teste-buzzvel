@@ -64,13 +64,19 @@ Redireciona para /generate
 
 Pagina com o formulário de geração de cartão de visitas. Ao preencher e enviar o formulário com sucesso, redireciona para a pagina do download do QR Code.
 
+![Pagina de geração de cartão de visitas](./screenshots/generate.png)
+
 - /cartao/{id}
 
 Pagina do download da imagem mobile contendo QR Code com o link do cartão de visitas.
 
+![Pagina de download da imagem mobile](./screenshots/mobile_image.png)
+
 - /{slug}
 
 Pagina do cartão de visitas.
+
+![Pagina do cartão de visitas](./screenshots/card.png)
 
 ## API
 
