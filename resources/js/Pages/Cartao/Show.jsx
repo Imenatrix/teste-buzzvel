@@ -34,6 +34,11 @@ export default function(props) {
         <div className="h-screen max-h-screen p-10 space-y-10">
             <div
                 ref={ref} className="border rounded-md shadow flex flex-col justify-between items-center p-12 m-auto"
+                // A ideia aqui é manter a proporção de uma imagem para celular.
+                // Também tem a medição dinamica do tamanho do botão para
+                // Melhorar a responsividade desse elemento. Já que a imagem
+                // É gerada dinamicamente, isso significa que a imagem se
+                // Adapta ao tamanho do dispositivo.
                 style={{aspectRatio: '9/16', maxHeight: `calc(100% - 2.5em - ${buttonHeight}px)`}}
             >
                 <h1 className="text-3xl">{cartao.nome}</h1>
