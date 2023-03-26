@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Lib\Slug;
 use App\Models\Cartao;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -29,7 +30,13 @@ class CartaoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cartao = new Cartao;
+        $cartao->nome = $request->input('nome');
+        $cartao->linkedin = $request->input('linkedin');
+        $cartao->github = $request->input('github');
+        $cartao->slug = Slug::generateSlug($cartao);
+        $cartao->save();
+        return redirect()->route('cartao.show', ['cartao' => $cartao]);
     }
 
     /**
