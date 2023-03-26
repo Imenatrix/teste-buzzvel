@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cartao;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class CartaoController extends Controller
 {
@@ -20,7 +21,7 @@ class CartaoController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('Cartao/Create');
     }
 
     /**
